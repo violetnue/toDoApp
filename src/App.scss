@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap");
+$textColor: #3d3434;
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5vw;
+  color: $textColor;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+.borderBackground {
+  background-image: linear-gradient(
+    to top,
+    #ff9a9e,
+    #ffa8a4,
+    #feb6ad,
+    #fcc3b7,
+    #fad0c4
+  );
+  text-align: center;
+  padding: 20vw;
+}
+.transBox {
+  margin: 3vw;
+  background-color: rgba(255, 255, 255, 0.7); //#ffffff;
+  border: 5px dotted #ffa8a4;
+  h1 {
+    font-family: 'Beth Ellen', cursive;
+    margin: 5%;
+    font-weight: bold;
+    color: $textColor;
+    font-size: 6vw;
+    border: 1px dotted blue;
+  }
+}
+button {
+  color: #fcf0ed;
+  background-image: linear-gradient(
+    to top,
+    #ff9a9e,
+    #ffa8a4,
+    #feb6ad,
+    #fcc3b7,
+    #fad0c4
+  );
+  margin-left: 1vw;
+  margin-bottom: 1vw;
+  border-radius: 6%;
+  cursor: pointer;
+  padding: 1vw 5vw;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #faedca;
+  &:hover {
+    background-image: linear-gradient(
+      to right,
+      #ff9a9e,
+      #ffa8a4,
+      #feb6ad,
+      #fcc3b7,
+      #fad0c4
+    );
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
+.Tasks, .Tasks-active ,.Tasks-finished {
+  border: 1px solid lightgreen;
+  width: 100%;
+  height: 100%;
+  padding: 3vw;
+  // font-size:vw;
+  // margin-top: 3vw;
+  // margin-bottom: 7vw;
+  // margin-left: 7vw;
+  // margin-right: 7vw;
+  span{
+    border: 1px solid yellow;
+    width:5%;
+    padding: 1vw;
+    top:1vw;
+    left:-1vw;
+
+  }
+}
+.AddTask {
+  display: flex;
+  justify-content: center;
+}
+.showButtons {
+  border: 2px dotted darkblue;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2vw;
+  padding-left: 2.5vw;
+  padding-right: 3.5vw;
+  button {
+    border: 2px dotted blue;
+    width:35%;
+    }
+}
+.form {
+  width: 50%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  input {
+    width: 100%;
+    height: 100%;
+    color: $textColor;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    background: #fcf0ed;
+  }
+  label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      border-bottom: 3px solid #ff9a9e;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    .contentName {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.form input:focus + .labelName .contentName,
+.form input:valid + .labelName .contentName {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: $textColor;
+}
+.form input:focus + .labelName::after,
+.form input:valid + .labelName::after {
+  transform: translateX(0%);
+}
+
+
+.borderTasks{
+  background-color: rgba(255, 255, 255, 0.1); //#ffffff;
+  padding-top:1vw;
+  border: 1px solid red;
+  // display: flex;
+  button{
+    width:10%;
+    justify-content: center;
+
+    @media (max-width: 881px) {
+      display: flex;
+      justify-content:center;
+
+    }
+
+    .material-icons {
+      color: #fcf0ed;
+      justify-content: center;
+      margin-left: -1.5vw;
+
+      // @media (max-width: 881px) {
+      //   margin-left: -1.5vw;
+      //   justify-content:center;
+      // }
+
+      // align-items: center;
+      // justify-content: center;
+      // top:50%;
+      // left:50%;
+    }
+  }
+}
+.introBox{
+  display: flex;
+  justify-content: center;
+  margin-top: 25%;
+  .showIntroButton{
+    width:25%;
+    top:50%;
+    down:50%;
+
+  }
+}
+// .introbox{
+//   transition: all 0.3s ease;
+//   transform: translateX(50%);
+// }
+
+// @media (min-width: 881px) {
+//   background-color: #ffa500;
+// }
+
+
+
+
+
+
+//
