@@ -165,11 +165,8 @@ button {
   button{
     width:10%;
     justify-content: center;
-
     @media (max-width: 881px) {
-      display: flex;
-      justify-content:center;
-
+      justify-content:flex-start;
     }
 
     .material-icons {
